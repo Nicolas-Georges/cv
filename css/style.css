@@ -22,15 +22,60 @@ body {
 h2 {
     font-weight: bold;
     text-transform: uppercase;
+    margin: 0;
+
 }
 
+h2, h3, #liste-parcours span {
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 #nav-reseaux {
     background-color: white;
+    padding: 15px;
 }
-
+#nav-reseaux img{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    background-color: #242a42;
+    border-radius: 5px;
+}
+#nav-reseaux li{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
 #navbar {
     color: black;
-    background: rgba(229, 235, 244, .95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background: rgba(229, 235, 244, 0.9);
+    margin: 16px;
+    border-radius: 7px;
+    width: calc(100% - 32px);
+    position: absolute;
+}
+#button-reseaux{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border-style: none;
+    background: white;
+    font-size: 28px;
+    padding: 20px 15px;
+    border-radius: 7px 0 0 7px;
+}
+#button-reseaux span{
+    text-transform: uppercase;
+    font-weight: bolder;
+
+}
+#button-reseaux svg {
+    width: 25px;
+    height: 25px;
 }
 
 #navbar a {
@@ -141,6 +186,190 @@ h2 {
     #presentation {
         min-height: 400px;
     }
+    #presentation h2 {
+        text-align: center;
+    }
+    #presentation > p{
+        align-self: center;
+        text-align: center;
+    }
+    #no-content {
+        width: 300px;
+        height: 370px;
+    }
+    video{
+        height: 100%;
+        height: 100%;
+    }
+    #capacites{
+        padding: 40px 16px;
+    }
+    #capacite-switch {
+        display: flex;
+        gap: 10px;
+    }
+    #capacites-icon li{
+        width: 32px;
+        height: 32px;
+    }
+    #capacites-icon{
+        gap: 20px;
+    }
+    #capacites-icon img {
+        width: 28px;
+    }
+    #capacite-switch div {
+        width: 12px;
+        height: 12px;
+        background-color: white;
+        border: 1px solid white;
+        border-radius: 50%;
+        opacity: 0.5;
+    }
 
+    #capacite-info p {
+        margin-bottom: 36px;
 
+    }
+    #capacites #capacite-info{
+        margin: 0;
+    }
+    #mon-parcours {
+        min-height: 500px;
+    }
+
+    iframe {
+        width: 340px;
+        height: 200px;
+    }
+
+    #liste-parcours img {
+        width: 300px;
+        border: 1px solid transparent;
+        border-radius: 10px;
+    }
+
+    #liste-parcours button img {
+        margin-left: 35px;
+    }
+    #img-desktop{
+        display: none;
+    }
+    .competence-logo{
+        width: 150px;
+        height: 150px;
+    }
+    #nav-burger-menu.active{
+        display: flex;
+        flex-direction: column-reverse;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100vh;
+        background-color: #ebeff4;
+        z-index: 10;
+    }
+    #nav-burger-menu.active #primary-menu li:not(#logo-overwatch),#nav-burger-menu.active #nav-reseaux,#nav-burger-menu.active #close-burger-menu {
+        display: block;
+    }
+    #nav-burger-menu.active #primary-menu{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 10px;
+        gap: 0;
+    }
+    #nav-burger-menu.active #primary-menu:before{
+        content: '';
+        background: url("../img/webp/logo.webp") no-repeat;
+        background-size: cover;
+        width: 350px;
+        height: 350px;
+        margin: -40px 0 0;
+        align-self: center;
+    }
+    #nav-burger-menu.active #primary-menu li{
+        width: calc(100% - 25px);
+        border-radius: 4px;
+        padding: 15px;
+    }
+    #nav-burger-menu.active #nav-reseaux li{
+        width: calc(100% - 25px);
+        padding: 10px;
+        margin: 0;
+        border-radius: 4px;
+    }
+    #nav-burger-menu.active #nav-reseaux div{
+        padding-bottom: 20px;
+    }
+    #nav-burger-menu.active #primary-menu li:hover, #nav-burger-menu.active #nav-reseaux li:hover {
+        background-color: rgba(0,0,0,0.1);
+    }
+    #nav-burger-menu.active #nav-reseaux{
+        width: calc(100% - 16px);
+        padding: 0 0 0 16px;
+    }
+    #nav-burger-menu.active #logo-overwatch{
+        display: none;
+    }
+    #nav-burger-menu.active #close-burger-menu{
+        align-self: flex-start;
+    }
+    #close-reseaux-menu{
+        display: none;
+    }
+}
+@media screen and (min-width: 960px) {
+    #mon-parcours li > img.active{
+        display: block;
+    }
+    #competence-liste li{
+        width: 210px;
+        height: 318px;
+    }
+    #competence-liste{
+        justify-content: center;
+    }
+    footer{
+        display: grid;
+        grid-template-areas: 'logo copyright social-media';
+        justify-content: space-around;
+    }
+    footer > img{
+        grid-area: logo;
+    }
+    footer p{
+        grid-area: copyright;
+    }
+    footer ul{
+        width: 200px;
+        grid-area: social-media;
+        justify-content: center;
+    }
+    #nav-reseaux.active{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        top: calc(100% + 10px);
+        border-radius: 4px;
+    }
+    #nav-reseaux.active h3{
+        margin:0 0 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #nav-reseaux.active h3:before{
+        content: '';
+        background: url("../img/webp/logo.webp") no-repeat;
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+    #nav-reseaux.active li:hover {
+        background-color: rgba(0,0,0,0.1);
+    }
 }

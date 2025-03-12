@@ -9,6 +9,7 @@
           content="Portfolio de Willems Nicolas-Georges">
     <meta itemprop="url" content="https://ton-site.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" defer src="js/main.js"></script>
 </head>
 <body>
 <h1 class="hidden">Willems Nicolas-Georges</h1>
@@ -141,36 +142,83 @@
                 <p>L'expérience utilisateur au centre des préoccupations d'un site web</p>
             </li>
         </ul>
+        <ul id="capacite-switch">
+            <li>
+                <div class="active"></div>
+            </li>
+            <li>
+                <div></div>
+            </li>
+            <li>
+                <div></div>
+            </li>
+            <li>
+                <div></div>
+            </li>
+        </ul>
     </section>
 
     <section id="mon-parcours">
         <h2>Mon parcours</h2>
-        <p>nfznfnqinciqsjcoqs,conqskncqsncknqskcnqkscqsqsdcqzkncqsknc kdksndkfnkjsqnfckjnqskcnqsncknsqkcnkq <br>sncksqncnsqncksc
-            lkd,fqsjicnqskcnkjsqncksnkcnksncksnd</p>
-        <iframe width="1039" height="779" src="https://www.youtube.com/embed/S8gMdY9L7Wk"
+        <p>Après des études en sciences appliquées au secondaire,
+            j’ai commencé une formation en soins infirmiers avant de me réorienter vers
+            le monde du travail. J’ai travaillé six mois à la Poste, puis passé les tests
+            d’agent de sécurité. Pendant trois ans, j’ai exercé chez Securail pour Infrabel,
+            une expérience enrichissante qui m’a beaucoup appris. Un accident de travail m’a
+            forcé à me réinventer, mais il m’a aussi permis d’évoluer et de tirer de précieuses leçons.
+            Aujourd’hui, je me tourne avec passion vers le développement web, un domaine où je peux allier
+            logique, créativité et apprentissage continu."</p>
+        <iframe width="1039" height="779" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=YnRMwsZSoWjML896"
                 title="Sogitec Showreel (1985)" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
         </iframe>
-        <ul id="liste-parcours">
-            <li>
-                <button id="button-secondaire" aria-label="Mon Parcourt Scolaire">Mon Parcourt Scolaire</button>
-                <p>lorempcdcnozdokzodkozkdoakdqkdpa<br>ednzidnizndizindzid</p>
-                <img src="img/image_classe_scolaire.webp" alt="Image classe scolaire">
-            </li>
-            <li>
-                <button id="button-superieur" aria-label="Mon Parcourt Supérieur">Mon Parcourt Supérieur</button>
-                <p>lorempcdcnozdokzodkozkdoakdqkdpa<br>ednzidnizndizindzid</p>
-                <img src="img/webp/unficlass.webp" alt="Image classe dans">
-            </li>
-            <li>
-                <button id="button-professionelle " aria-label="Mon parcourt proffesionelle">Mon parcourt
-                    proffesionelle
-                </button>
-                <p>lorempcdcnozdokzodkozkdoakdqkdpa<br>ednzidnizndizindzid</p>
-                <img src="img/webp/travaille.webp" alt="Image classe dans">
-            </li>
-        </ul>
+        <div id="parcours-content">
+            <ul id="liste-parcours">
+                <li>
+
+                    <button id="button-secondaire" aria-label="Mon Parcourt Scolaire">
+                        <span>Parcours Scolaire</span>
+                        <img src="img/SVG/arrow-down-svgrepo-com.svg">
+                    </button>
+                    <p class="hidden">lorempcdcnozdokzodkozkdoakdqkdpa<br>ednzidnizndizindzid</p>
+
+                    <img src="img/image_classe_scolaire.webp" alt="Image classe scolaire">
+                </li>
+                <li>
+
+                    <button id="button-superieur" aria-label="Mon Parcourt Supérieur">
+                        <span>Parcours Supérieur</span>
+                        <img src="img/SVG/arrow-down-svgrepo-com.svg">
+                    </button>
+                    <p class="hidden">lorempcdcnozdokzodkozkdoakdqkdpa<br>ednzidnizndizindzid</p>
+
+                    <img src="img/webp/unficlass.webp" alt="Image classe dans">
+                </li>
+                <li>
+
+                    <button id="button-professionelle" aria-label="Mon parcourt proffesionelle">
+                    <span>Parcours
+                    proffesionel</span>
+                        <img src="img/SVG/arrow-down-svgrepo-com.svg">
+                    </button>
+
+                    <p class="hidden">lorempcdcnozdokzodkozkdoakdqkdpa<br>ednzidnizndizindzid</p>
+                    <img src="img/webp/travaille.webp" alt="Image classe dans">
+                </li>
+            </ul>
+            <ul id="img-desktop">
+                <li>
+                    <img src="img/image_classe_scolaire.webp" alt="Image classe scolaire" class="active">
+                </li>
+                <li>
+                    <img src="img/webp/unficlass.webp" alt="Image classe dans">
+                </li>
+                <li>
+                    <img src="img/webp/travaille.webp" alt="Image classe dans">
+                </li>
+            </ul>
+        </div>
     </section>
 
     <section id="mes-compétence">
