@@ -7,8 +7,10 @@
     <!-- Définition du site web -->
     <meta itemscope itemtype="https://schema.org/WebSite" itemprop="name"
           content="Portfolio de Willems Nicolas-Georges">
-    <meta itemprop="url" content="https://ton-site.com">
+    <meta itemprop="url" content="https://willems-nicolas-georges.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cv de Willems Nicolas-Georges, étudiant en développement web passionné par la création numérique. Découvrez mes projets, compétences et parcours.">
+
     <script type="module" defer src="js/main.js"></script>
 </head>
 <body>
@@ -20,53 +22,58 @@
     <nav id="navbar">
         <h2 class="hidden">Menu</h2>
         <img src="./img/SVG/burger-menu-svgrepo-com.svg" alt="Trois barres horizontales pour un menu" id="burger-menu">
-        <nav id="nav-reseaux" class="hidden">
-            <h3>mes réseaux </h3>
-            <div>
-                <svg></svg>
-                <ul>
-                    <li>
-                        <svg>
+        <button id="button-reseaux">
+            <span><img src="img/webp/Mes%20Réseaux_transparent-(1).webp"></span>
+            <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 
-                        </svg>
-                        <a href="https://ton-site.com">Linkendin</a>
-                    </li>
-                    <li>
-                        <svg>
+                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
 
-                        </svg>
-                        <a href="https://github.com/ton-site">Github</a>
-                    </li>
-                    <li>
-                        <svg>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
 
-                        </svg>
-                        <a href="https://github.com/ton-site">Github</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!-- Logo -->
-        <div class="logo">
-            <a href="#home">
-                <img src="img/SVG/logo-ow.svg" alt="Logo principal">
-            </a>
-        </div>
+                <g id="SVGRepo_iconCarrier">
+                    <path d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
+                          fill="#00000099"/>
+                </g>
 
-        <!-- Menu principal -->
-        <ul id="primary-menu" class="hidden">
-            <li><a href="#Héros">Héros</a></li>
-            <li><a href="#Saison">Saison</a></li>
-            <li><a href="#Actualités">Actualités</a></li>
-            <li><a href="#Communauté">Communauté</a></li>
-            <li><a href="#Boutique">Boutique</a></li>
-        </ul>
-
-        <!-- Loupe de recherche -->
-        <div class="hidden">
-            <a id="loupe" href="#search" aria-label="Rechercher">
-                <img src="img/SVG/icons-search.svg" alt="Icône de recherche">
-            </a>
+            </svg>
+        </button>
+        <div id="nav-burger-menu">
+            <nav id="nav-reseaux">
+                <button id="close-reseaux-menu">
+                    <img src="img/SVG/cross-small-svgrepo-com.svg" alt="croix">
+                </button>
+                <h3>Mes réseaux </h3>
+                <div>
+                    <ul>
+                        <li>
+                            <img src="img/SVG/linkedin-svgrepo-com.svg" alt="Logo Linkedin">
+                            <a href="https://www.linkedin.com/in/nicolas-georges-willems-5b11a4356/?trk=opento_sprofile_topcard">Linkendin</a>
+                        </li>
+                        <li>
+                            <img src="img/SVG/instagram-svgrepo-com.svg" alt="Logo Instagram">
+                            <a href="https://github.com/ton-site">Instagram</a>
+                        </li>
+                        <li>
+                            <img src="img/SVG/github-142-svgrepo-com.svg" alt="Logo Github">
+                            <a href="https://github.com/Nicolas-Georges">Github</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Menu principal -->
+            <ul id="primary-menu">
+                <li id="logo-overwatch">
+                    <a href="https://overwatch.blizzard.com/fr-fr/heroes/kiriko/">
+                        <img src="img/SVG/logo-ow.svg" alt="Logo principal">
+                    </a>
+                </li>
+                <li><a href="#capacites" class="section-primary-menu">Capacités</a></li>
+                <li><a href="#mon-parcours" class="section-primary-menu">Parcours</a></li>
+                <li><a href="#mes-compétence" class="section-primary-menu">Compétences</a></li>
+            </ul>
+            <button id="close-burger-menu">
+                <img src="img/SVG/cross-small-svgrepo-com.svg" alt="croix">
+            </button>
         </div>
 
         <button id="button-portfolio" aria-label="Mon portfolio">Mon portfolio</button>
@@ -109,35 +116,62 @@
 
     </section>
 
-    <section id="capacités">
+    <section id="capacites">
         <h2>Capacités</h2>
-        <ul>
-            <li>
+        <ul id="capacites-icon">
+            <li class="capacite-logo active programmation">
+                <img src="img/SVG/program-svgrepo-com.svg">
+            </li>
+            <li class="capacite-logo sql">
+                <img src="img/SVG/mysql-svgrepo-com.svg">
+            </li>
+            <li class="capacite-logo montage">
+                <img src="img/SVG/icon-cam.svg">
+            </li>
+            <li class="capacite-logo ux">
+                <img src="img/SVG/ux-f-svgrepo-com.svg">
+            </li>
+        </ul>
+        <div id="no-content"></div>
+        <ul id="background-capacite">
+            <li class="capacite-video active programmation">
                 <video id="background-video-bs" autoplay loop muted>
                     <source src="video/4K%20Base%20de%20Donnée.mp4" type="video/mp4">
                 </video>
-                <h3>Programmation</h3>
-                <p>Capacités dans plusieurs langages de programmation</p>
             </li>
-            <li>
+            <li class="capacite-video sql">
                 <video id="background-video-progra" autoplay loop muted>
                     <source src="video/%5B4K%5D%20Dark%20Screen%20with%20Matrix%20Green%20Lines%20🔋%20Animated%20Background.mp4"
                             type="video/mp4">
                 </video>
-                <h3>Gestion de Base de données</h3>
-                <p>La gestion des données d'un site web</p>
             </li>
-            <li>
+            <li class="capacite-video montage">
                 <video id="background-video-montagevid" autoplay loop muted>
                     <source src="video/lequeux-gaspar-willems-villers-184_Ca41QI8W.mp4" type="video/mp4">
                 </video>
-                <h3>Montage Vidéo</h3>
-                <p>Expérience dans le montage vidéo et publicitaire</p>
             </li>
-            <li>
+            <li class="capacite-video ux">
                 <video id="background-video-designweb" autoplay loop muted>
                     <source src="video/What's%20Figma_%20%5B2019%5D.mp4" type="video/mp4">
                 </video>
+            </li>
+        </ul>
+        <ul id="capacite-info">
+            <li class="capacite-text active programmation">
+                <h3>Programmation</h3>
+                <p>Capacités dans plusieurs langages de programmation</p>
+            </li>
+            <li class="capacite-text sql">
+                <h3>Gestion de Base de données</h3>
+                <p>La gestion des données d'un site web</p>
+            </li>
+            <li class="capacite-text montage">
+
+                <h3>Montage Vidéo</h3>
+                <p>Expérience dans le montage vidéo et publicitaire</p>
+            </li>
+            <li class="capacite-text ux">
+
                 <h3>UX Designer</h3>
                 <p>L'expérience utilisateur au centre des préoccupations d'un site web</p>
             </li>
@@ -224,61 +258,91 @@
     <section id="mes-compétence">
         <h2>Mes Compétence</h2>
 
-        <ul>
-            <li>
+        <ul id="competence-liste">
+            <li class="competence active html">
+                <img src="img/webp/how-do-you-convert-flash-to-html5.webp"
+                     alt="Une image qui représente du code html avec son logo" class="competence-logo">
                 <figure>
-                    <img src="img/ton-image.jpg" alt="Description de l'image">
-                    <figcaption>Une image qui représente du code html avec sont logo</figcaption>
+                    <img src="img/SVG/html5-02-svgrepo-com.svg" alt="Logo HTML" class="competence-icon">
+                    <figcaption>HTML</figcaption>
+                </figure>
+            </li>
+            <li class="competence css">
+                <img src="img/webp/Artboard-11.webp" alt="Une image qui represente le logo du CSS"
+                     class="competence-logo">
+                <figure>
+                    <img src="img/SVG/css3-02-svgrepo-com.svg" alt="Logo CSS" class="competence-icon">
+                    <figcaption>CSS</figcaption>
                 </figure>
 
             </li>
-            <li>
+            <li class="competence js">
+                <img src="img/webp/Javascript-Content-Article.webp"
+                     alt="Logo JavaScript sur fond noir avec des formes autour" class="competence-logo">
                 <figure>
-                    <img src="img/ton-image.jpg" alt="Description de l'image">
-                    <figcaption>Une image qui represente le logo du CSS</figcaption>
+                    <img src="img/SVG/js01-svgrepo-com.svg" alt="Logo JavaScript" class="competence-icon">
+                    <figcaption>JavaScript</figcaption>
                 </figure>
-
             </li>
-            <li>
-                <figure>
-                    <img src="img/ton-image.jpg" alt="Description de l'image">
-                    <figcaption>Description de l'image</figcaption>
-                </figure>
+            <li class="competence figma">
+                <img src="img/webp/creation-logo-Figma.webp" alt="Logo Figma" class="competence-logo">
 
+                <figure>
+                    <img src="img/SVG/figma-svgrepo-com(1).svg" alt="Logo Figma" class="competence-icon">
+                    <figcaption>Figma</figcaption>
+                </figure>
             </li>
-            <li>
-                <figure>
-                    <img src="img/ton-image.jpg" alt="Description de l'image">
-                    <figcaption>Description de l'image</figcaption>
-                </figure>
+            <li class="competence php">
+                <img src="img/webp/cours-php-max.webp" alt="Logo PHP" class="competence-logo">
 
-            </li>
-            <li>
                 <figure>
-                    <img src="img/ton-image.jpg" alt="Description de l'image">
-                    <figcaption>Description de l'image</figcaption>
+                    <img src="img/SVG/php-svgrepo-com.svg" alt="Logo PHP" class="competence-icon">
+                    <figcaption>PHP</figcaption>
                 </figure>
-
             </li>
         </ul>
+        <ul id="competence-description">
+            <li class="active info-competence html">Sissi l'impératrice</li>
+            <li class="info-competence css">Croqette le bidou d'acier</li>
+            <li class="info-competence js">Iris AHHHHH</li>
+            <li class="info-competence figma">Yuyu le fantôme</li>
+            <li class="info-competence php">Poupette l'aigris</li>
+        </ul>
+    </section>
+
+    <section id="autres-projets">
+        <h3>Tu veux découvrir d'autres projets que j'ai pu réaliser ?</h3>
+        <button aria-label="Ouvrir la galerie des projets">Galerie</button>
 
     </section>
 
     <section id="restez-connecter">
         <h3>Restez connectés</h3>
+        <ul>
+            <li>
+                <a href="#"><img src="img/SVG/instagram-svgrepo-com.svg" alt="Logo Instagram"/></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/nicolas-georges-willems-5b11a4356/?trk=opento_sprofile_topcard"><img src="img/SVG/linkedin-svgrepo-com.svg" alt="Logo Linkedin"/></a>
+            </li>
+            <li>
+                <a href="https://github.com/Nicolas-Georges"><img src="img/SVG/github-142-svgrepo-com.svg" alt="Logo GitHub"/></a>
+            </li>
+        </ul>
     </section>
 </main>
 
 <!-- Pied de page -->
 <footer>
-    <div id="footer-content">
-        <p>&copy; 2024 Willems Nicolas-Georges. Tous droits réservés.</p>
-        <ul>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="https://www.instagram.com/nicolasgeorgeswillems/">Instagram</a></li>
-            <li><a href="#">YouTube</a></li>
-        </ul>
-    </div>
+    <img src="img/webp/logo.webp" alt="Logo"/>
+    <ul>
+        <li><a href="#"><img src="img/SVG/instagram-svgrepo-com.svg" alt="Logo Instagram"/></a></li>
+        <li><a href="https://www.linkedin.com/in/nicolas-georges-willems-5b11a4356/?trk=opento_sprofile_topcard"><img src="img/SVG/linkedin-svgrepo-com.svg" alt="Logo Linkedin"/></a></li>
+        <li><a href="https://github.com/Nicolas-Georges"><img src="img/SVG/github-142-svgrepo-com.svg" alt="Logo GitHub"/></a></li>
+    </ul>
+    <p>&copy; 2024 Willems Nicolas-Georges. Tous droits réservés.</p>
+
 </footer>
+
 </body>
 </html>
